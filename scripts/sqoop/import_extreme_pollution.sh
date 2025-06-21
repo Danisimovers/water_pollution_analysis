@@ -3,8 +3,7 @@ sqoop import \
   --username danil \
   --password password \
   --table extreme_pollution \
-  --target-dir /user/danil/water_pollution/extreme_pollution_csv \
-  --fields-terminated-by ',' \
+  --target-dir /user/danil/water_pollution/extreme_pollution \
   --delete-target-dir \
   --num-mappers 1 \
-  --as-textfile
+  --as-parquetfile

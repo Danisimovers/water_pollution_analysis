@@ -2,7 +2,7 @@
 // WARNING: This class is AUTO-GENERATED. Modify at your own risk.
 //
 // Debug information:
-// Generated date: Thu Jun 19 18:32:44 MSK 2025
+// Generated date: Sat Jun 21 16:11:42 MSK 2025
 // For connector: org.apache.sqoop.manager.MySQLManager
 import org.apache.hadoop.io.BytesWritable;
 import org.apache.hadoop.io.Text;
@@ -34,7 +34,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.HashMap;
 
-public class codegen_pdk extends SqoopRecord  implements DBWritable, Writable {
+public class pdk extends SqoopRecord  implements DBWritable, Writable {
   private final int PROTOCOL_VERSION = 3;
   public int getClassFormatVersion() { return PROTOCOL_VERSION; }
   public static interface FieldSetterCommand {    void setField(Object value);  }  protected ResultSet __cur_result_set;
@@ -43,65 +43,65 @@ public class codegen_pdk extends SqoopRecord  implements DBWritable, Writable {
     setters.put("ingredient", new FieldSetterCommand() {
       @Override
       public void setField(Object value) {
-        codegen_pdk.this.ingredient = (String)value;
+        pdk.this.ingredient = (String)value;
       }
     });
     setters.put("ingredient_npa", new FieldSetterCommand() {
       @Override
       public void setField(Object value) {
-        codegen_pdk.this.ingredient_npa = (String)value;
+        pdk.this.ingredient_npa = (String)value;
       }
     });
     setters.put("hazard_class", new FieldSetterCommand() {
       @Override
       public void setField(Object value) {
-        codegen_pdk.this.hazard_class = (Integer)value;
+        pdk.this.hazard_class = (String)value;
       }
     });
     setters.put("value", new FieldSetterCommand() {
       @Override
       public void setField(Object value) {
-        codegen_pdk.this.value = (java.math.BigDecimal)value;
+        pdk.this.value = (java.math.BigDecimal)value;
       }
     });
     setters.put("lpv", new FieldSetterCommand() {
       @Override
       public void setField(Object value) {
-        codegen_pdk.this.lpv = (String)value;
+        pdk.this.lpv = (String)value;
       }
     });
     setters.put("formula", new FieldSetterCommand() {
       @Override
       public void setField(Object value) {
-        codegen_pdk.this.formula = (String)value;
+        pdk.this.formula = (String)value;
       }
     });
     setters.put("n_cas", new FieldSetterCommand() {
       @Override
       public void setField(Object value) {
-        codegen_pdk.this.n_cas = (String)value;
+        pdk.this.n_cas = (String)value;
       }
     });
     setters.put("npa", new FieldSetterCommand() {
       @Override
       public void setField(Object value) {
-        codegen_pdk.this.npa = (String)value;
+        pdk.this.npa = (String)value;
       }
     });
     setters.put("date_start", new FieldSetterCommand() {
       @Override
       public void setField(Object value) {
-        codegen_pdk.this.date_start = (java.sql.Date)value;
+        pdk.this.date_start = (java.sql.Date)value;
       }
     });
     setters.put("date_end", new FieldSetterCommand() {
       @Override
       public void setField(Object value) {
-        codegen_pdk.this.date_end = (java.sql.Date)value;
+        pdk.this.date_end = (java.sql.Date)value;
       }
     });
   }
-  public codegen_pdk() {
+  public pdk() {
     init0();
   }
   private String ingredient;
@@ -111,7 +111,7 @@ public class codegen_pdk extends SqoopRecord  implements DBWritable, Writable {
   public void set_ingredient(String ingredient) {
     this.ingredient = ingredient;
   }
-  public codegen_pdk with_ingredient(String ingredient) {
+  public pdk with_ingredient(String ingredient) {
     this.ingredient = ingredient;
     return this;
   }
@@ -122,18 +122,18 @@ public class codegen_pdk extends SqoopRecord  implements DBWritable, Writable {
   public void set_ingredient_npa(String ingredient_npa) {
     this.ingredient_npa = ingredient_npa;
   }
-  public codegen_pdk with_ingredient_npa(String ingredient_npa) {
+  public pdk with_ingredient_npa(String ingredient_npa) {
     this.ingredient_npa = ingredient_npa;
     return this;
   }
-  private Integer hazard_class;
-  public Integer get_hazard_class() {
+  private String hazard_class;
+  public String get_hazard_class() {
     return hazard_class;
   }
-  public void set_hazard_class(Integer hazard_class) {
+  public void set_hazard_class(String hazard_class) {
     this.hazard_class = hazard_class;
   }
-  public codegen_pdk with_hazard_class(Integer hazard_class) {
+  public pdk with_hazard_class(String hazard_class) {
     this.hazard_class = hazard_class;
     return this;
   }
@@ -144,7 +144,7 @@ public class codegen_pdk extends SqoopRecord  implements DBWritable, Writable {
   public void set_value(java.math.BigDecimal value) {
     this.value = value;
   }
-  public codegen_pdk with_value(java.math.BigDecimal value) {
+  public pdk with_value(java.math.BigDecimal value) {
     this.value = value;
     return this;
   }
@@ -155,7 +155,7 @@ public class codegen_pdk extends SqoopRecord  implements DBWritable, Writable {
   public void set_lpv(String lpv) {
     this.lpv = lpv;
   }
-  public codegen_pdk with_lpv(String lpv) {
+  public pdk with_lpv(String lpv) {
     this.lpv = lpv;
     return this;
   }
@@ -166,7 +166,7 @@ public class codegen_pdk extends SqoopRecord  implements DBWritable, Writable {
   public void set_formula(String formula) {
     this.formula = formula;
   }
-  public codegen_pdk with_formula(String formula) {
+  public pdk with_formula(String formula) {
     this.formula = formula;
     return this;
   }
@@ -177,7 +177,7 @@ public class codegen_pdk extends SqoopRecord  implements DBWritable, Writable {
   public void set_n_cas(String n_cas) {
     this.n_cas = n_cas;
   }
-  public codegen_pdk with_n_cas(String n_cas) {
+  public pdk with_n_cas(String n_cas) {
     this.n_cas = n_cas;
     return this;
   }
@@ -188,7 +188,7 @@ public class codegen_pdk extends SqoopRecord  implements DBWritable, Writable {
   public void set_npa(String npa) {
     this.npa = npa;
   }
-  public codegen_pdk with_npa(String npa) {
+  public pdk with_npa(String npa) {
     this.npa = npa;
     return this;
   }
@@ -199,7 +199,7 @@ public class codegen_pdk extends SqoopRecord  implements DBWritable, Writable {
   public void set_date_start(java.sql.Date date_start) {
     this.date_start = date_start;
   }
-  public codegen_pdk with_date_start(java.sql.Date date_start) {
+  public pdk with_date_start(java.sql.Date date_start) {
     this.date_start = date_start;
     return this;
   }
@@ -210,7 +210,7 @@ public class codegen_pdk extends SqoopRecord  implements DBWritable, Writable {
   public void set_date_end(java.sql.Date date_end) {
     this.date_end = date_end;
   }
-  public codegen_pdk with_date_end(java.sql.Date date_end) {
+  public pdk with_date_end(java.sql.Date date_end) {
     this.date_end = date_end;
     return this;
   }
@@ -218,10 +218,10 @@ public class codegen_pdk extends SqoopRecord  implements DBWritable, Writable {
     if (this == o) {
       return true;
     }
-    if (!(o instanceof codegen_pdk)) {
+    if (!(o instanceof pdk)) {
       return false;
     }
-    codegen_pdk that = (codegen_pdk) o;
+    pdk that = (pdk) o;
     boolean equal = true;
     equal = equal && (this.ingredient == null ? that.ingredient == null : this.ingredient.equals(that.ingredient));
     equal = equal && (this.ingredient_npa == null ? that.ingredient_npa == null : this.ingredient_npa.equals(that.ingredient_npa));
@@ -239,10 +239,10 @@ public class codegen_pdk extends SqoopRecord  implements DBWritable, Writable {
     if (this == o) {
       return true;
     }
-    if (!(o instanceof codegen_pdk)) {
+    if (!(o instanceof pdk)) {
       return false;
     }
-    codegen_pdk that = (codegen_pdk) o;
+    pdk that = (pdk) o;
     boolean equal = true;
     equal = equal && (this.ingredient == null ? that.ingredient == null : this.ingredient.equals(that.ingredient));
     equal = equal && (this.ingredient_npa == null ? that.ingredient_npa == null : this.ingredient_npa.equals(that.ingredient_npa));
@@ -260,7 +260,7 @@ public class codegen_pdk extends SqoopRecord  implements DBWritable, Writable {
     this.__cur_result_set = __dbResults;
     this.ingredient = JdbcWritableBridge.readString(1, __dbResults);
     this.ingredient_npa = JdbcWritableBridge.readString(2, __dbResults);
-    this.hazard_class = JdbcWritableBridge.readInteger(3, __dbResults);
+    this.hazard_class = JdbcWritableBridge.readString(3, __dbResults);
     this.value = JdbcWritableBridge.readBigDecimal(4, __dbResults);
     this.lpv = JdbcWritableBridge.readString(5, __dbResults);
     this.formula = JdbcWritableBridge.readString(6, __dbResults);
@@ -272,7 +272,7 @@ public class codegen_pdk extends SqoopRecord  implements DBWritable, Writable {
   public void readFields0(ResultSet __dbResults) throws SQLException {
     this.ingredient = JdbcWritableBridge.readString(1, __dbResults);
     this.ingredient_npa = JdbcWritableBridge.readString(2, __dbResults);
-    this.hazard_class = JdbcWritableBridge.readInteger(3, __dbResults);
+    this.hazard_class = JdbcWritableBridge.readString(3, __dbResults);
     this.value = JdbcWritableBridge.readBigDecimal(4, __dbResults);
     this.lpv = JdbcWritableBridge.readString(5, __dbResults);
     this.formula = JdbcWritableBridge.readString(6, __dbResults);
@@ -294,7 +294,7 @@ public class codegen_pdk extends SqoopRecord  implements DBWritable, Writable {
   public int write(PreparedStatement __dbStmt, int __off) throws SQLException {
     JdbcWritableBridge.writeString(ingredient, 1 + __off, 12, __dbStmt);
     JdbcWritableBridge.writeString(ingredient_npa, 2 + __off, 12, __dbStmt);
-    JdbcWritableBridge.writeInteger(hazard_class, 3 + __off, 4, __dbStmt);
+    JdbcWritableBridge.writeString(hazard_class, 3 + __off, 12, __dbStmt);
     JdbcWritableBridge.writeBigDecimal(value, 4 + __off, 3, __dbStmt);
     JdbcWritableBridge.writeString(lpv, 5 + __off, 12, __dbStmt);
     JdbcWritableBridge.writeString(formula, 6 + __off, 12, __dbStmt);
@@ -307,7 +307,7 @@ public class codegen_pdk extends SqoopRecord  implements DBWritable, Writable {
   public void write0(PreparedStatement __dbStmt, int __off) throws SQLException {
     JdbcWritableBridge.writeString(ingredient, 1 + __off, 12, __dbStmt);
     JdbcWritableBridge.writeString(ingredient_npa, 2 + __off, 12, __dbStmt);
-    JdbcWritableBridge.writeInteger(hazard_class, 3 + __off, 4, __dbStmt);
+    JdbcWritableBridge.writeString(hazard_class, 3 + __off, 12, __dbStmt);
     JdbcWritableBridge.writeBigDecimal(value, 4 + __off, 3, __dbStmt);
     JdbcWritableBridge.writeString(lpv, 5 + __off, 12, __dbStmt);
     JdbcWritableBridge.writeString(formula, 6 + __off, 12, __dbStmt);
@@ -332,7 +332,7 @@ this.readFields0(__dataIn);  }
     if (__dataIn.readBoolean()) { 
         this.hazard_class = null;
     } else {
-    this.hazard_class = Integer.valueOf(__dataIn.readInt());
+    this.hazard_class = Text.readString(__dataIn);
     }
     if (__dataIn.readBoolean()) { 
         this.value = null;
@@ -387,7 +387,7 @@ this.readFields0(__dataIn);  }
         __dataOut.writeBoolean(true);
     } else {
         __dataOut.writeBoolean(false);
-    __dataOut.writeInt(this.hazard_class);
+    Text.writeString(__dataOut, hazard_class);
     }
     if (null == this.value) { 
         __dataOut.writeBoolean(true);
@@ -449,7 +449,7 @@ this.readFields0(__dataIn);  }
         __dataOut.writeBoolean(true);
     } else {
         __dataOut.writeBoolean(false);
-    __dataOut.writeInt(this.hazard_class);
+    Text.writeString(__dataOut, hazard_class);
     }
     if (null == this.value) { 
         __dataOut.writeBoolean(true);
@@ -511,7 +511,7 @@ this.readFields0(__dataIn);  }
     __sb.append(fieldDelim);
     __sb.append(FieldFormatter.escapeAndEnclose(ingredient_npa==null?"null":ingredient_npa, delimiters));
     __sb.append(fieldDelim);
-    __sb.append(FieldFormatter.escapeAndEnclose(hazard_class==null?"null":"" + hazard_class, delimiters));
+    __sb.append(FieldFormatter.escapeAndEnclose(hazard_class==null?"null":hazard_class, delimiters));
     __sb.append(fieldDelim);
     __sb.append(FieldFormatter.escapeAndEnclose(value==null?"null":value.toPlainString(), delimiters));
     __sb.append(fieldDelim);
@@ -536,7 +536,7 @@ this.readFields0(__dataIn);  }
     __sb.append(fieldDelim);
     __sb.append(FieldFormatter.escapeAndEnclose(ingredient_npa==null?"null":ingredient_npa, delimiters));
     __sb.append(fieldDelim);
-    __sb.append(FieldFormatter.escapeAndEnclose(hazard_class==null?"null":"" + hazard_class, delimiters));
+    __sb.append(FieldFormatter.escapeAndEnclose(hazard_class==null?"null":hazard_class, delimiters));
     __sb.append(fieldDelim);
     __sb.append(FieldFormatter.escapeAndEnclose(value==null?"null":value.toPlainString(), delimiters));
     __sb.append(fieldDelim);
@@ -629,8 +629,8 @@ this.readFields0(__dataIn);  }
     } else {
         __cur_str = "null";
     }
-    if (__cur_str.equals("null") || __cur_str.length() == 0) { this.hazard_class = null; } else {
-      this.hazard_class = Integer.valueOf(__cur_str);
+    if (__cur_str.equals("null")) { this.hazard_class = null; } else {
+      this.hazard_class = __cur_str;
     }
 
     if (__it.hasNext()) {
@@ -724,8 +724,8 @@ this.readFields0(__dataIn);  }
     } else {
         __cur_str = "null";
     }
-    if (__cur_str.equals("null") || __cur_str.length() == 0) { this.hazard_class = null; } else {
-      this.hazard_class = Integer.valueOf(__cur_str);
+    if (__cur_str.equals("null")) { this.hazard_class = null; } else {
+      this.hazard_class = __cur_str;
     }
 
     if (__it.hasNext()) {
@@ -794,13 +794,13 @@ this.readFields0(__dataIn);  }
     } catch (RuntimeException e) {    throw new RuntimeException("Can't parse input data: '" + __cur_str + "'", e);    }  }
 
   public Object clone() throws CloneNotSupportedException {
-    codegen_pdk o = (codegen_pdk) super.clone();
+    pdk o = (pdk) super.clone();
     o.date_start = (o.date_start != null) ? (java.sql.Date) o.date_start.clone() : null;
     o.date_end = (o.date_end != null) ? (java.sql.Date) o.date_end.clone() : null;
     return o;
   }
 
-  public void clone0(codegen_pdk o) throws CloneNotSupportedException {
+  public void clone0(pdk o) throws CloneNotSupportedException {
     o.date_start = (o.date_start != null) ? (java.sql.Date) o.date_start.clone() : null;
     o.date_end = (o.date_end != null) ? (java.sql.Date) o.date_end.clone() : null;
   }

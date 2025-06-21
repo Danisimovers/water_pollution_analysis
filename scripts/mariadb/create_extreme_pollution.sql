@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS extreme_pollution (
     oktmo VARCHAR(20),
     water_body VARCHAR(255),
     indicator VARCHAR(255),
-    hazard_class INT,
+    hazard_class VARCHAR(10),   -- изменили тип с INT на VARCHAR
     cnt_cases INT,
     value_min DECIMAL(10,4),
     value_max DECIMAL(10,4),

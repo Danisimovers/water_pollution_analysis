@@ -2,7 +2,7 @@
 // WARNING: This class is AUTO-GENERATED. Modify at your own risk.
 //
 // Debug information:
-// Generated date: Thu Jun 19 18:19:35 MSK 2025
+// Generated date: Sat Jun 21 16:11:30 MSK 2025
 // For connector: org.apache.sqoop.manager.MySQLManager
 import org.apache.hadoop.io.BytesWritable;
 import org.apache.hadoop.io.Text;
@@ -34,7 +34,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.HashMap;
 
-public class codegen_extreme_pollution extends SqoopRecord  implements DBWritable, Writable {
+public class extreme_pollution extends SqoopRecord  implements DBWritable, Writable {
   private final int PROTOCOL_VERSION = 3;
   public int getClassFormatVersion() { return PROTOCOL_VERSION; }
   public static interface FieldSetterCommand {    void setField(Object value);  }  protected ResultSet __cur_result_set;
@@ -43,83 +43,83 @@ public class codegen_extreme_pollution extends SqoopRecord  implements DBWritabl
     setters.put("id", new FieldSetterCommand() {
       @Override
       public void setField(Object value) {
-        codegen_extreme_pollution.this.id = (Integer)value;
+        extreme_pollution.this.id = (Integer)value;
       }
     });
     setters.put("period", new FieldSetterCommand() {
       @Override
       public void setField(Object value) {
-        codegen_extreme_pollution.this.period = (java.sql.Date)value;
+        extreme_pollution.this.period = (java.sql.Date)value;
       }
     });
     setters.put("subject", new FieldSetterCommand() {
       @Override
       public void setField(Object value) {
-        codegen_extreme_pollution.this.subject = (String)value;
+        extreme_pollution.this.subject = (String)value;
       }
     });
     setters.put("municipality", new FieldSetterCommand() {
       @Override
       public void setField(Object value) {
-        codegen_extreme_pollution.this.municipality = (String)value;
+        extreme_pollution.this.municipality = (String)value;
       }
     });
     setters.put("settlement", new FieldSetterCommand() {
       @Override
       public void setField(Object value) {
-        codegen_extreme_pollution.this.settlement = (String)value;
+        extreme_pollution.this.settlement = (String)value;
       }
     });
     setters.put("oktmo", new FieldSetterCommand() {
       @Override
       public void setField(Object value) {
-        codegen_extreme_pollution.this.oktmo = (String)value;
+        extreme_pollution.this.oktmo = (String)value;
       }
     });
     setters.put("water_body", new FieldSetterCommand() {
       @Override
       public void setField(Object value) {
-        codegen_extreme_pollution.this.water_body = (String)value;
+        extreme_pollution.this.water_body = (String)value;
       }
     });
     setters.put("indicator", new FieldSetterCommand() {
       @Override
       public void setField(Object value) {
-        codegen_extreme_pollution.this.indicator = (String)value;
+        extreme_pollution.this.indicator = (String)value;
       }
     });
     setters.put("hazard_class", new FieldSetterCommand() {
       @Override
       public void setField(Object value) {
-        codegen_extreme_pollution.this.hazard_class = (Integer)value;
+        extreme_pollution.this.hazard_class = (String)value;
       }
     });
     setters.put("cnt_cases", new FieldSetterCommand() {
       @Override
       public void setField(Object value) {
-        codegen_extreme_pollution.this.cnt_cases = (Integer)value;
+        extreme_pollution.this.cnt_cases = (Integer)value;
       }
     });
     setters.put("value_min", new FieldSetterCommand() {
       @Override
       public void setField(Object value) {
-        codegen_extreme_pollution.this.value_min = (java.math.BigDecimal)value;
+        extreme_pollution.this.value_min = (java.math.BigDecimal)value;
       }
     });
     setters.put("value_max", new FieldSetterCommand() {
       @Override
       public void setField(Object value) {
-        codegen_extreme_pollution.this.value_max = (java.math.BigDecimal)value;
+        extreme_pollution.this.value_max = (java.math.BigDecimal)value;
       }
     });
     setters.put("unit", new FieldSetterCommand() {
       @Override
       public void setField(Object value) {
-        codegen_extreme_pollution.this.unit = (String)value;
+        extreme_pollution.this.unit = (String)value;
       }
     });
   }
-  public codegen_extreme_pollution() {
+  public extreme_pollution() {
     init0();
   }
   private Integer id;
@@ -129,7 +129,7 @@ public class codegen_extreme_pollution extends SqoopRecord  implements DBWritabl
   public void set_id(Integer id) {
     this.id = id;
   }
-  public codegen_extreme_pollution with_id(Integer id) {
+  public extreme_pollution with_id(Integer id) {
     this.id = id;
     return this;
   }
@@ -140,7 +140,7 @@ public class codegen_extreme_pollution extends SqoopRecord  implements DBWritabl
   public void set_period(java.sql.Date period) {
     this.period = period;
   }
-  public codegen_extreme_pollution with_period(java.sql.Date period) {
+  public extreme_pollution with_period(java.sql.Date period) {
     this.period = period;
     return this;
   }
@@ -151,7 +151,7 @@ public class codegen_extreme_pollution extends SqoopRecord  implements DBWritabl
   public void set_subject(String subject) {
     this.subject = subject;
   }
-  public codegen_extreme_pollution with_subject(String subject) {
+  public extreme_pollution with_subject(String subject) {
     this.subject = subject;
     return this;
   }
@@ -162,7 +162,7 @@ public class codegen_extreme_pollution extends SqoopRecord  implements DBWritabl
   public void set_municipality(String municipality) {
     this.municipality = municipality;
   }
-  public codegen_extreme_pollution with_municipality(String municipality) {
+  public extreme_pollution with_municipality(String municipality) {
     this.municipality = municipality;
     return this;
   }
@@ -173,7 +173,7 @@ public class codegen_extreme_pollution extends SqoopRecord  implements DBWritabl
   public void set_settlement(String settlement) {
     this.settlement = settlement;
   }
-  public codegen_extreme_pollution with_settlement(String settlement) {
+  public extreme_pollution with_settlement(String settlement) {
     this.settlement = settlement;
     return this;
   }
@@ -184,7 +184,7 @@ public class codegen_extreme_pollution extends SqoopRecord  implements DBWritabl
   public void set_oktmo(String oktmo) {
     this.oktmo = oktmo;
   }
-  public codegen_extreme_pollution with_oktmo(String oktmo) {
+  public extreme_pollution with_oktmo(String oktmo) {
     this.oktmo = oktmo;
     return this;
   }
@@ -195,7 +195,7 @@ public class codegen_extreme_pollution extends SqoopRecord  implements DBWritabl
   public void set_water_body(String water_body) {
     this.water_body = water_body;
   }
-  public codegen_extreme_pollution with_water_body(String water_body) {
+  public extreme_pollution with_water_body(String water_body) {
     this.water_body = water_body;
     return this;
   }
@@ -206,18 +206,18 @@ public class codegen_extreme_pollution extends SqoopRecord  implements DBWritabl
   public void set_indicator(String indicator) {
     this.indicator = indicator;
   }
-  public codegen_extreme_pollution with_indicator(String indicator) {
+  public extreme_pollution with_indicator(String indicator) {
     this.indicator = indicator;
     return this;
   }
-  private Integer hazard_class;
-  public Integer get_hazard_class() {
+  private String hazard_class;
+  public String get_hazard_class() {
     return hazard_class;
   }
-  public void set_hazard_class(Integer hazard_class) {
+  public void set_hazard_class(String hazard_class) {
     this.hazard_class = hazard_class;
   }
-  public codegen_extreme_pollution with_hazard_class(Integer hazard_class) {
+  public extreme_pollution with_hazard_class(String hazard_class) {
     this.hazard_class = hazard_class;
     return this;
   }
@@ -228,7 +228,7 @@ public class codegen_extreme_pollution extends SqoopRecord  implements DBWritabl
   public void set_cnt_cases(Integer cnt_cases) {
     this.cnt_cases = cnt_cases;
   }
-  public codegen_extreme_pollution with_cnt_cases(Integer cnt_cases) {
+  public extreme_pollution with_cnt_cases(Integer cnt_cases) {
     this.cnt_cases = cnt_cases;
     return this;
   }
@@ -239,7 +239,7 @@ public class codegen_extreme_pollution extends SqoopRecord  implements DBWritabl
   public void set_value_min(java.math.BigDecimal value_min) {
     this.value_min = value_min;
   }
-  public codegen_extreme_pollution with_value_min(java.math.BigDecimal value_min) {
+  public extreme_pollution with_value_min(java.math.BigDecimal value_min) {
     this.value_min = value_min;
     return this;
   }
@@ -250,7 +250,7 @@ public class codegen_extreme_pollution extends SqoopRecord  implements DBWritabl
   public void set_value_max(java.math.BigDecimal value_max) {
     this.value_max = value_max;
   }
-  public codegen_extreme_pollution with_value_max(java.math.BigDecimal value_max) {
+  public extreme_pollution with_value_max(java.math.BigDecimal value_max) {
     this.value_max = value_max;
     return this;
   }
@@ -261,7 +261,7 @@ public class codegen_extreme_pollution extends SqoopRecord  implements DBWritabl
   public void set_unit(String unit) {
     this.unit = unit;
   }
-  public codegen_extreme_pollution with_unit(String unit) {
+  public extreme_pollution with_unit(String unit) {
     this.unit = unit;
     return this;
   }
@@ -269,10 +269,10 @@ public class codegen_extreme_pollution extends SqoopRecord  implements DBWritabl
     if (this == o) {
       return true;
     }
-    if (!(o instanceof codegen_extreme_pollution)) {
+    if (!(o instanceof extreme_pollution)) {
       return false;
     }
-    codegen_extreme_pollution that = (codegen_extreme_pollution) o;
+    extreme_pollution that = (extreme_pollution) o;
     boolean equal = true;
     equal = equal && (this.id == null ? that.id == null : this.id.equals(that.id));
     equal = equal && (this.period == null ? that.period == null : this.period.equals(that.period));
@@ -293,10 +293,10 @@ public class codegen_extreme_pollution extends SqoopRecord  implements DBWritabl
     if (this == o) {
       return true;
     }
-    if (!(o instanceof codegen_extreme_pollution)) {
+    if (!(o instanceof extreme_pollution)) {
       return false;
     }
-    codegen_extreme_pollution that = (codegen_extreme_pollution) o;
+    extreme_pollution that = (extreme_pollution) o;
     boolean equal = true;
     equal = equal && (this.id == null ? that.id == null : this.id.equals(that.id));
     equal = equal && (this.period == null ? that.period == null : this.period.equals(that.period));
@@ -323,7 +323,7 @@ public class codegen_extreme_pollution extends SqoopRecord  implements DBWritabl
     this.oktmo = JdbcWritableBridge.readString(6, __dbResults);
     this.water_body = JdbcWritableBridge.readString(7, __dbResults);
     this.indicator = JdbcWritableBridge.readString(8, __dbResults);
-    this.hazard_class = JdbcWritableBridge.readInteger(9, __dbResults);
+    this.hazard_class = JdbcWritableBridge.readString(9, __dbResults);
     this.cnt_cases = JdbcWritableBridge.readInteger(10, __dbResults);
     this.value_min = JdbcWritableBridge.readBigDecimal(11, __dbResults);
     this.value_max = JdbcWritableBridge.readBigDecimal(12, __dbResults);
@@ -338,7 +338,7 @@ public class codegen_extreme_pollution extends SqoopRecord  implements DBWritabl
     this.oktmo = JdbcWritableBridge.readString(6, __dbResults);
     this.water_body = JdbcWritableBridge.readString(7, __dbResults);
     this.indicator = JdbcWritableBridge.readString(8, __dbResults);
-    this.hazard_class = JdbcWritableBridge.readInteger(9, __dbResults);
+    this.hazard_class = JdbcWritableBridge.readString(9, __dbResults);
     this.cnt_cases = JdbcWritableBridge.readInteger(10, __dbResults);
     this.value_min = JdbcWritableBridge.readBigDecimal(11, __dbResults);
     this.value_max = JdbcWritableBridge.readBigDecimal(12, __dbResults);
@@ -363,7 +363,7 @@ public class codegen_extreme_pollution extends SqoopRecord  implements DBWritabl
     JdbcWritableBridge.writeString(oktmo, 6 + __off, 12, __dbStmt);
     JdbcWritableBridge.writeString(water_body, 7 + __off, 12, __dbStmt);
     JdbcWritableBridge.writeString(indicator, 8 + __off, 12, __dbStmt);
-    JdbcWritableBridge.writeInteger(hazard_class, 9 + __off, 4, __dbStmt);
+    JdbcWritableBridge.writeString(hazard_class, 9 + __off, 12, __dbStmt);
     JdbcWritableBridge.writeInteger(cnt_cases, 10 + __off, 4, __dbStmt);
     JdbcWritableBridge.writeBigDecimal(value_min, 11 + __off, 3, __dbStmt);
     JdbcWritableBridge.writeBigDecimal(value_max, 12 + __off, 3, __dbStmt);
@@ -379,7 +379,7 @@ public class codegen_extreme_pollution extends SqoopRecord  implements DBWritabl
     JdbcWritableBridge.writeString(oktmo, 6 + __off, 12, __dbStmt);
     JdbcWritableBridge.writeString(water_body, 7 + __off, 12, __dbStmt);
     JdbcWritableBridge.writeString(indicator, 8 + __off, 12, __dbStmt);
-    JdbcWritableBridge.writeInteger(hazard_class, 9 + __off, 4, __dbStmt);
+    JdbcWritableBridge.writeString(hazard_class, 9 + __off, 12, __dbStmt);
     JdbcWritableBridge.writeInteger(cnt_cases, 10 + __off, 4, __dbStmt);
     JdbcWritableBridge.writeBigDecimal(value_min, 11 + __off, 3, __dbStmt);
     JdbcWritableBridge.writeBigDecimal(value_max, 12 + __off, 3, __dbStmt);
@@ -431,7 +431,7 @@ this.readFields0(__dataIn);  }
     if (__dataIn.readBoolean()) { 
         this.hazard_class = null;
     } else {
-    this.hazard_class = Integer.valueOf(__dataIn.readInt());
+    this.hazard_class = Text.readString(__dataIn);
     }
     if (__dataIn.readBoolean()) { 
         this.cnt_cases = null;
@@ -507,7 +507,7 @@ this.readFields0(__dataIn);  }
         __dataOut.writeBoolean(true);
     } else {
         __dataOut.writeBoolean(false);
-    __dataOut.writeInt(this.hazard_class);
+    Text.writeString(__dataOut, hazard_class);
     }
     if (null == this.cnt_cases) { 
         __dataOut.writeBoolean(true);
@@ -587,7 +587,7 @@ this.readFields0(__dataIn);  }
         __dataOut.writeBoolean(true);
     } else {
         __dataOut.writeBoolean(false);
-    __dataOut.writeInt(this.hazard_class);
+    Text.writeString(__dataOut, hazard_class);
     }
     if (null == this.cnt_cases) { 
         __dataOut.writeBoolean(true);
@@ -643,7 +643,7 @@ this.readFields0(__dataIn);  }
     __sb.append(fieldDelim);
     __sb.append(FieldFormatter.escapeAndEnclose(indicator==null?"null":indicator, delimiters));
     __sb.append(fieldDelim);
-    __sb.append(FieldFormatter.escapeAndEnclose(hazard_class==null?"null":"" + hazard_class, delimiters));
+    __sb.append(FieldFormatter.escapeAndEnclose(hazard_class==null?"null":hazard_class, delimiters));
     __sb.append(fieldDelim);
     __sb.append(FieldFormatter.escapeAndEnclose(cnt_cases==null?"null":"" + cnt_cases, delimiters));
     __sb.append(fieldDelim);
@@ -674,7 +674,7 @@ this.readFields0(__dataIn);  }
     __sb.append(fieldDelim);
     __sb.append(FieldFormatter.escapeAndEnclose(indicator==null?"null":indicator, delimiters));
     __sb.append(fieldDelim);
-    __sb.append(FieldFormatter.escapeAndEnclose(hazard_class==null?"null":"" + hazard_class, delimiters));
+    __sb.append(FieldFormatter.escapeAndEnclose(hazard_class==null?"null":hazard_class, delimiters));
     __sb.append(fieldDelim);
     __sb.append(FieldFormatter.escapeAndEnclose(cnt_cases==null?"null":"" + cnt_cases, delimiters));
     __sb.append(fieldDelim);
@@ -815,8 +815,8 @@ this.readFields0(__dataIn);  }
     } else {
         __cur_str = "null";
     }
-    if (__cur_str.equals("null") || __cur_str.length() == 0) { this.hazard_class = null; } else {
-      this.hazard_class = Integer.valueOf(__cur_str);
+    if (__cur_str.equals("null")) { this.hazard_class = null; } else {
+      this.hazard_class = __cur_str;
     }
 
     if (__it.hasNext()) {
@@ -937,8 +937,8 @@ this.readFields0(__dataIn);  }
     } else {
         __cur_str = "null";
     }
-    if (__cur_str.equals("null") || __cur_str.length() == 0) { this.hazard_class = null; } else {
-      this.hazard_class = Integer.valueOf(__cur_str);
+    if (__cur_str.equals("null")) { this.hazard_class = null; } else {
+      this.hazard_class = __cur_str;
     }
 
     if (__it.hasNext()) {
@@ -980,12 +980,12 @@ this.readFields0(__dataIn);  }
     } catch (RuntimeException e) {    throw new RuntimeException("Can't parse input data: '" + __cur_str + "'", e);    }  }
 
   public Object clone() throws CloneNotSupportedException {
-    codegen_extreme_pollution o = (codegen_extreme_pollution) super.clone();
+    extreme_pollution o = (extreme_pollution) super.clone();
     o.period = (o.period != null) ? (java.sql.Date) o.period.clone() : null;
     return o;
   }
 
-  public void clone0(codegen_extreme_pollution o) throws CloneNotSupportedException {
+  public void clone0(extreme_pollution o) throws CloneNotSupportedException {
     o.period = (o.period != null) ? (java.sql.Date) o.period.clone() : null;
   }
 

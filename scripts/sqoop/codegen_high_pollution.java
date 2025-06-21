@@ -2,7 +2,7 @@
 // WARNING: This class is AUTO-GENERATED. Modify at your own risk.
 //
 // Debug information:
-// Generated date: Thu Jun 19 18:36:10 MSK 2025
+// Generated date: Sat Jun 21 16:11:37 MSK 2025
 // For connector: org.apache.sqoop.manager.MySQLManager
 import org.apache.hadoop.io.BytesWritable;
 import org.apache.hadoop.io.Text;
@@ -34,7 +34,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.HashMap;
 
-public class codegen_high_pollution extends SqoopRecord  implements DBWritable, Writable {
+public class high_pollution extends SqoopRecord  implements DBWritable, Writable {
   private final int PROTOCOL_VERSION = 3;
   public int getClassFormatVersion() { return PROTOCOL_VERSION; }
   public static interface FieldSetterCommand {    void setField(Object value);  }  protected ResultSet __cur_result_set;
@@ -43,71 +43,71 @@ public class codegen_high_pollution extends SqoopRecord  implements DBWritable, 
     setters.put("id", new FieldSetterCommand() {
       @Override
       public void setField(Object value) {
-        codegen_high_pollution.this.id = (Integer)value;
+        high_pollution.this.id = (Integer)value;
       }
     });
     setters.put("period", new FieldSetterCommand() {
       @Override
       public void setField(Object value) {
-        codegen_high_pollution.this.period = (java.sql.Date)value;
-      }
-    });
-    setters.put("subject", new FieldSetterCommand() {
-      @Override
-      public void setField(Object value) {
-        codegen_high_pollution.this.subject = (String)value;
+        high_pollution.this.period = (java.sql.Date)value;
       }
     });
     setters.put("okato", new FieldSetterCommand() {
       @Override
       public void setField(Object value) {
-        codegen_high_pollution.this.okato = (String)value;
+        high_pollution.this.okato = (String)value;
+      }
+    });
+    setters.put("subject", new FieldSetterCommand() {
+      @Override
+      public void setField(Object value) {
+        high_pollution.this.subject = (String)value;
       }
     });
     setters.put("river_basin", new FieldSetterCommand() {
       @Override
       public void setField(Object value) {
-        codegen_high_pollution.this.river_basin = (String)value;
+        high_pollution.this.river_basin = (String)value;
       }
     });
     setters.put("indicator", new FieldSetterCommand() {
       @Override
       public void setField(Object value) {
-        codegen_high_pollution.this.indicator = (String)value;
+        high_pollution.this.indicator = (String)value;
       }
     });
     setters.put("hazard_class", new FieldSetterCommand() {
       @Override
       public void setField(Object value) {
-        codegen_high_pollution.this.hazard_class = (Integer)value;
+        high_pollution.this.hazard_class = (String)value;
       }
     });
     setters.put("cnt_cases", new FieldSetterCommand() {
       @Override
       public void setField(Object value) {
-        codegen_high_pollution.this.cnt_cases = (Integer)value;
+        high_pollution.this.cnt_cases = (Integer)value;
       }
     });
     setters.put("value_min", new FieldSetterCommand() {
       @Override
       public void setField(Object value) {
-        codegen_high_pollution.this.value_min = (java.math.BigDecimal)value;
+        high_pollution.this.value_min = (java.math.BigDecimal)value;
       }
     });
     setters.put("value_max", new FieldSetterCommand() {
       @Override
       public void setField(Object value) {
-        codegen_high_pollution.this.value_max = (java.math.BigDecimal)value;
+        high_pollution.this.value_max = (java.math.BigDecimal)value;
       }
     });
     setters.put("unit", new FieldSetterCommand() {
       @Override
       public void setField(Object value) {
-        codegen_high_pollution.this.unit = (String)value;
+        high_pollution.this.unit = (String)value;
       }
     });
   }
-  public codegen_high_pollution() {
+  public high_pollution() {
     init0();
   }
   private Integer id;
@@ -117,7 +117,7 @@ public class codegen_high_pollution extends SqoopRecord  implements DBWritable, 
   public void set_id(Integer id) {
     this.id = id;
   }
-  public codegen_high_pollution with_id(Integer id) {
+  public high_pollution with_id(Integer id) {
     this.id = id;
     return this;
   }
@@ -128,19 +128,8 @@ public class codegen_high_pollution extends SqoopRecord  implements DBWritable, 
   public void set_period(java.sql.Date period) {
     this.period = period;
   }
-  public codegen_high_pollution with_period(java.sql.Date period) {
+  public high_pollution with_period(java.sql.Date period) {
     this.period = period;
-    return this;
-  }
-  private String subject;
-  public String get_subject() {
-    return subject;
-  }
-  public void set_subject(String subject) {
-    this.subject = subject;
-  }
-  public codegen_high_pollution with_subject(String subject) {
-    this.subject = subject;
     return this;
   }
   private String okato;
@@ -150,8 +139,19 @@ public class codegen_high_pollution extends SqoopRecord  implements DBWritable, 
   public void set_okato(String okato) {
     this.okato = okato;
   }
-  public codegen_high_pollution with_okato(String okato) {
+  public high_pollution with_okato(String okato) {
     this.okato = okato;
+    return this;
+  }
+  private String subject;
+  public String get_subject() {
+    return subject;
+  }
+  public void set_subject(String subject) {
+    this.subject = subject;
+  }
+  public high_pollution with_subject(String subject) {
+    this.subject = subject;
     return this;
   }
   private String river_basin;
@@ -161,7 +161,7 @@ public class codegen_high_pollution extends SqoopRecord  implements DBWritable, 
   public void set_river_basin(String river_basin) {
     this.river_basin = river_basin;
   }
-  public codegen_high_pollution with_river_basin(String river_basin) {
+  public high_pollution with_river_basin(String river_basin) {
     this.river_basin = river_basin;
     return this;
   }
@@ -172,18 +172,18 @@ public class codegen_high_pollution extends SqoopRecord  implements DBWritable, 
   public void set_indicator(String indicator) {
     this.indicator = indicator;
   }
-  public codegen_high_pollution with_indicator(String indicator) {
+  public high_pollution with_indicator(String indicator) {
     this.indicator = indicator;
     return this;
   }
-  private Integer hazard_class;
-  public Integer get_hazard_class() {
+  private String hazard_class;
+  public String get_hazard_class() {
     return hazard_class;
   }
-  public void set_hazard_class(Integer hazard_class) {
+  public void set_hazard_class(String hazard_class) {
     this.hazard_class = hazard_class;
   }
-  public codegen_high_pollution with_hazard_class(Integer hazard_class) {
+  public high_pollution with_hazard_class(String hazard_class) {
     this.hazard_class = hazard_class;
     return this;
   }
@@ -194,7 +194,7 @@ public class codegen_high_pollution extends SqoopRecord  implements DBWritable, 
   public void set_cnt_cases(Integer cnt_cases) {
     this.cnt_cases = cnt_cases;
   }
-  public codegen_high_pollution with_cnt_cases(Integer cnt_cases) {
+  public high_pollution with_cnt_cases(Integer cnt_cases) {
     this.cnt_cases = cnt_cases;
     return this;
   }
@@ -205,7 +205,7 @@ public class codegen_high_pollution extends SqoopRecord  implements DBWritable, 
   public void set_value_min(java.math.BigDecimal value_min) {
     this.value_min = value_min;
   }
-  public codegen_high_pollution with_value_min(java.math.BigDecimal value_min) {
+  public high_pollution with_value_min(java.math.BigDecimal value_min) {
     this.value_min = value_min;
     return this;
   }
@@ -216,7 +216,7 @@ public class codegen_high_pollution extends SqoopRecord  implements DBWritable, 
   public void set_value_max(java.math.BigDecimal value_max) {
     this.value_max = value_max;
   }
-  public codegen_high_pollution with_value_max(java.math.BigDecimal value_max) {
+  public high_pollution with_value_max(java.math.BigDecimal value_max) {
     this.value_max = value_max;
     return this;
   }
@@ -227,7 +227,7 @@ public class codegen_high_pollution extends SqoopRecord  implements DBWritable, 
   public void set_unit(String unit) {
     this.unit = unit;
   }
-  public codegen_high_pollution with_unit(String unit) {
+  public high_pollution with_unit(String unit) {
     this.unit = unit;
     return this;
   }
@@ -235,15 +235,15 @@ public class codegen_high_pollution extends SqoopRecord  implements DBWritable, 
     if (this == o) {
       return true;
     }
-    if (!(o instanceof codegen_high_pollution)) {
+    if (!(o instanceof high_pollution)) {
       return false;
     }
-    codegen_high_pollution that = (codegen_high_pollution) o;
+    high_pollution that = (high_pollution) o;
     boolean equal = true;
     equal = equal && (this.id == null ? that.id == null : this.id.equals(that.id));
     equal = equal && (this.period == null ? that.period == null : this.period.equals(that.period));
-    equal = equal && (this.subject == null ? that.subject == null : this.subject.equals(that.subject));
     equal = equal && (this.okato == null ? that.okato == null : this.okato.equals(that.okato));
+    equal = equal && (this.subject == null ? that.subject == null : this.subject.equals(that.subject));
     equal = equal && (this.river_basin == null ? that.river_basin == null : this.river_basin.equals(that.river_basin));
     equal = equal && (this.indicator == null ? that.indicator == null : this.indicator.equals(that.indicator));
     equal = equal && (this.hazard_class == null ? that.hazard_class == null : this.hazard_class.equals(that.hazard_class));
@@ -257,15 +257,15 @@ public class codegen_high_pollution extends SqoopRecord  implements DBWritable, 
     if (this == o) {
       return true;
     }
-    if (!(o instanceof codegen_high_pollution)) {
+    if (!(o instanceof high_pollution)) {
       return false;
     }
-    codegen_high_pollution that = (codegen_high_pollution) o;
+    high_pollution that = (high_pollution) o;
     boolean equal = true;
     equal = equal && (this.id == null ? that.id == null : this.id.equals(that.id));
     equal = equal && (this.period == null ? that.period == null : this.period.equals(that.period));
-    equal = equal && (this.subject == null ? that.subject == null : this.subject.equals(that.subject));
     equal = equal && (this.okato == null ? that.okato == null : this.okato.equals(that.okato));
+    equal = equal && (this.subject == null ? that.subject == null : this.subject.equals(that.subject));
     equal = equal && (this.river_basin == null ? that.river_basin == null : this.river_basin.equals(that.river_basin));
     equal = equal && (this.indicator == null ? that.indicator == null : this.indicator.equals(that.indicator));
     equal = equal && (this.hazard_class == null ? that.hazard_class == null : this.hazard_class.equals(that.hazard_class));
@@ -279,11 +279,11 @@ public class codegen_high_pollution extends SqoopRecord  implements DBWritable, 
     this.__cur_result_set = __dbResults;
     this.id = JdbcWritableBridge.readInteger(1, __dbResults);
     this.period = JdbcWritableBridge.readDate(2, __dbResults);
-    this.subject = JdbcWritableBridge.readString(3, __dbResults);
-    this.okato = JdbcWritableBridge.readString(4, __dbResults);
+    this.okato = JdbcWritableBridge.readString(3, __dbResults);
+    this.subject = JdbcWritableBridge.readString(4, __dbResults);
     this.river_basin = JdbcWritableBridge.readString(5, __dbResults);
     this.indicator = JdbcWritableBridge.readString(6, __dbResults);
-    this.hazard_class = JdbcWritableBridge.readInteger(7, __dbResults);
+    this.hazard_class = JdbcWritableBridge.readString(7, __dbResults);
     this.cnt_cases = JdbcWritableBridge.readInteger(8, __dbResults);
     this.value_min = JdbcWritableBridge.readBigDecimal(9, __dbResults);
     this.value_max = JdbcWritableBridge.readBigDecimal(10, __dbResults);
@@ -292,11 +292,11 @@ public class codegen_high_pollution extends SqoopRecord  implements DBWritable, 
   public void readFields0(ResultSet __dbResults) throws SQLException {
     this.id = JdbcWritableBridge.readInteger(1, __dbResults);
     this.period = JdbcWritableBridge.readDate(2, __dbResults);
-    this.subject = JdbcWritableBridge.readString(3, __dbResults);
-    this.okato = JdbcWritableBridge.readString(4, __dbResults);
+    this.okato = JdbcWritableBridge.readString(3, __dbResults);
+    this.subject = JdbcWritableBridge.readString(4, __dbResults);
     this.river_basin = JdbcWritableBridge.readString(5, __dbResults);
     this.indicator = JdbcWritableBridge.readString(6, __dbResults);
-    this.hazard_class = JdbcWritableBridge.readInteger(7, __dbResults);
+    this.hazard_class = JdbcWritableBridge.readString(7, __dbResults);
     this.cnt_cases = JdbcWritableBridge.readInteger(8, __dbResults);
     this.value_min = JdbcWritableBridge.readBigDecimal(9, __dbResults);
     this.value_max = JdbcWritableBridge.readBigDecimal(10, __dbResults);
@@ -315,11 +315,11 @@ public class codegen_high_pollution extends SqoopRecord  implements DBWritable, 
   public int write(PreparedStatement __dbStmt, int __off) throws SQLException {
     JdbcWritableBridge.writeInteger(id, 1 + __off, 4, __dbStmt);
     JdbcWritableBridge.writeDate(period, 2 + __off, 91, __dbStmt);
-    JdbcWritableBridge.writeString(subject, 3 + __off, 12, __dbStmt);
-    JdbcWritableBridge.writeString(okato, 4 + __off, 12, __dbStmt);
+    JdbcWritableBridge.writeString(okato, 3 + __off, 12, __dbStmt);
+    JdbcWritableBridge.writeString(subject, 4 + __off, 12, __dbStmt);
     JdbcWritableBridge.writeString(river_basin, 5 + __off, 12, __dbStmt);
     JdbcWritableBridge.writeString(indicator, 6 + __off, 12, __dbStmt);
-    JdbcWritableBridge.writeInteger(hazard_class, 7 + __off, 4, __dbStmt);
+    JdbcWritableBridge.writeString(hazard_class, 7 + __off, 12, __dbStmt);
     JdbcWritableBridge.writeInteger(cnt_cases, 8 + __off, 4, __dbStmt);
     JdbcWritableBridge.writeBigDecimal(value_min, 9 + __off, 3, __dbStmt);
     JdbcWritableBridge.writeBigDecimal(value_max, 10 + __off, 3, __dbStmt);
@@ -329,11 +329,11 @@ public class codegen_high_pollution extends SqoopRecord  implements DBWritable, 
   public void write0(PreparedStatement __dbStmt, int __off) throws SQLException {
     JdbcWritableBridge.writeInteger(id, 1 + __off, 4, __dbStmt);
     JdbcWritableBridge.writeDate(period, 2 + __off, 91, __dbStmt);
-    JdbcWritableBridge.writeString(subject, 3 + __off, 12, __dbStmt);
-    JdbcWritableBridge.writeString(okato, 4 + __off, 12, __dbStmt);
+    JdbcWritableBridge.writeString(okato, 3 + __off, 12, __dbStmt);
+    JdbcWritableBridge.writeString(subject, 4 + __off, 12, __dbStmt);
     JdbcWritableBridge.writeString(river_basin, 5 + __off, 12, __dbStmt);
     JdbcWritableBridge.writeString(indicator, 6 + __off, 12, __dbStmt);
-    JdbcWritableBridge.writeInteger(hazard_class, 7 + __off, 4, __dbStmt);
+    JdbcWritableBridge.writeString(hazard_class, 7 + __off, 12, __dbStmt);
     JdbcWritableBridge.writeInteger(cnt_cases, 8 + __off, 4, __dbStmt);
     JdbcWritableBridge.writeBigDecimal(value_min, 9 + __off, 3, __dbStmt);
     JdbcWritableBridge.writeBigDecimal(value_max, 10 + __off, 3, __dbStmt);
@@ -353,14 +353,14 @@ this.readFields0(__dataIn);  }
     this.period = new Date(__dataIn.readLong());
     }
     if (__dataIn.readBoolean()) { 
-        this.subject = null;
-    } else {
-    this.subject = Text.readString(__dataIn);
-    }
-    if (__dataIn.readBoolean()) { 
         this.okato = null;
     } else {
     this.okato = Text.readString(__dataIn);
+    }
+    if (__dataIn.readBoolean()) { 
+        this.subject = null;
+    } else {
+    this.subject = Text.readString(__dataIn);
     }
     if (__dataIn.readBoolean()) { 
         this.river_basin = null;
@@ -375,7 +375,7 @@ this.readFields0(__dataIn);  }
     if (__dataIn.readBoolean()) { 
         this.hazard_class = null;
     } else {
-    this.hazard_class = Integer.valueOf(__dataIn.readInt());
+    this.hazard_class = Text.readString(__dataIn);
     }
     if (__dataIn.readBoolean()) { 
         this.cnt_cases = null;
@@ -411,17 +411,17 @@ this.readFields0(__dataIn);  }
         __dataOut.writeBoolean(false);
     __dataOut.writeLong(this.period.getTime());
     }
-    if (null == this.subject) { 
-        __dataOut.writeBoolean(true);
-    } else {
-        __dataOut.writeBoolean(false);
-    Text.writeString(__dataOut, subject);
-    }
     if (null == this.okato) { 
         __dataOut.writeBoolean(true);
     } else {
         __dataOut.writeBoolean(false);
     Text.writeString(__dataOut, okato);
+    }
+    if (null == this.subject) { 
+        __dataOut.writeBoolean(true);
+    } else {
+        __dataOut.writeBoolean(false);
+    Text.writeString(__dataOut, subject);
     }
     if (null == this.river_basin) { 
         __dataOut.writeBoolean(true);
@@ -439,7 +439,7 @@ this.readFields0(__dataIn);  }
         __dataOut.writeBoolean(true);
     } else {
         __dataOut.writeBoolean(false);
-    __dataOut.writeInt(this.hazard_class);
+    Text.writeString(__dataOut, hazard_class);
     }
     if (null == this.cnt_cases) { 
         __dataOut.writeBoolean(true);
@@ -479,17 +479,17 @@ this.readFields0(__dataIn);  }
         __dataOut.writeBoolean(false);
     __dataOut.writeLong(this.period.getTime());
     }
-    if (null == this.subject) { 
-        __dataOut.writeBoolean(true);
-    } else {
-        __dataOut.writeBoolean(false);
-    Text.writeString(__dataOut, subject);
-    }
     if (null == this.okato) { 
         __dataOut.writeBoolean(true);
     } else {
         __dataOut.writeBoolean(false);
     Text.writeString(__dataOut, okato);
+    }
+    if (null == this.subject) { 
+        __dataOut.writeBoolean(true);
+    } else {
+        __dataOut.writeBoolean(false);
+    Text.writeString(__dataOut, subject);
     }
     if (null == this.river_basin) { 
         __dataOut.writeBoolean(true);
@@ -507,7 +507,7 @@ this.readFields0(__dataIn);  }
         __dataOut.writeBoolean(true);
     } else {
         __dataOut.writeBoolean(false);
-    __dataOut.writeInt(this.hazard_class);
+    Text.writeString(__dataOut, hazard_class);
     }
     if (null == this.cnt_cases) { 
         __dataOut.writeBoolean(true);
@@ -551,15 +551,15 @@ this.readFields0(__dataIn);  }
     __sb.append(fieldDelim);
     __sb.append(FieldFormatter.escapeAndEnclose(period==null?"null":"" + period, delimiters));
     __sb.append(fieldDelim);
-    __sb.append(FieldFormatter.escapeAndEnclose(subject==null?"null":subject, delimiters));
-    __sb.append(fieldDelim);
     __sb.append(FieldFormatter.escapeAndEnclose(okato==null?"null":okato, delimiters));
+    __sb.append(fieldDelim);
+    __sb.append(FieldFormatter.escapeAndEnclose(subject==null?"null":subject, delimiters));
     __sb.append(fieldDelim);
     __sb.append(FieldFormatter.escapeAndEnclose(river_basin==null?"null":river_basin, delimiters));
     __sb.append(fieldDelim);
     __sb.append(FieldFormatter.escapeAndEnclose(indicator==null?"null":indicator, delimiters));
     __sb.append(fieldDelim);
-    __sb.append(FieldFormatter.escapeAndEnclose(hazard_class==null?"null":"" + hazard_class, delimiters));
+    __sb.append(FieldFormatter.escapeAndEnclose(hazard_class==null?"null":hazard_class, delimiters));
     __sb.append(fieldDelim);
     __sb.append(FieldFormatter.escapeAndEnclose(cnt_cases==null?"null":"" + cnt_cases, delimiters));
     __sb.append(fieldDelim);
@@ -578,15 +578,15 @@ this.readFields0(__dataIn);  }
     __sb.append(fieldDelim);
     __sb.append(FieldFormatter.escapeAndEnclose(period==null?"null":"" + period, delimiters));
     __sb.append(fieldDelim);
-    __sb.append(FieldFormatter.escapeAndEnclose(subject==null?"null":subject, delimiters));
-    __sb.append(fieldDelim);
     __sb.append(FieldFormatter.escapeAndEnclose(okato==null?"null":okato, delimiters));
+    __sb.append(fieldDelim);
+    __sb.append(FieldFormatter.escapeAndEnclose(subject==null?"null":subject, delimiters));
     __sb.append(fieldDelim);
     __sb.append(FieldFormatter.escapeAndEnclose(river_basin==null?"null":river_basin, delimiters));
     __sb.append(fieldDelim);
     __sb.append(FieldFormatter.escapeAndEnclose(indicator==null?"null":indicator, delimiters));
     __sb.append(fieldDelim);
-    __sb.append(FieldFormatter.escapeAndEnclose(hazard_class==null?"null":"" + hazard_class, delimiters));
+    __sb.append(FieldFormatter.escapeAndEnclose(hazard_class==null?"null":hazard_class, delimiters));
     __sb.append(fieldDelim);
     __sb.append(FieldFormatter.escapeAndEnclose(cnt_cases==null?"null":"" + cnt_cases, delimiters));
     __sb.append(fieldDelim);
@@ -673,8 +673,8 @@ this.readFields0(__dataIn);  }
     } else {
         __cur_str = "null";
     }
-    if (__cur_str.equals("null")) { this.subject = null; } else {
-      this.subject = __cur_str;
+    if (__cur_str.equals("null")) { this.okato = null; } else {
+      this.okato = __cur_str;
     }
 
     if (__it.hasNext()) {
@@ -682,8 +682,8 @@ this.readFields0(__dataIn);  }
     } else {
         __cur_str = "null";
     }
-    if (__cur_str.equals("null")) { this.okato = null; } else {
-      this.okato = __cur_str;
+    if (__cur_str.equals("null")) { this.subject = null; } else {
+      this.subject = __cur_str;
     }
 
     if (__it.hasNext()) {
@@ -709,8 +709,8 @@ this.readFields0(__dataIn);  }
     } else {
         __cur_str = "null";
     }
-    if (__cur_str.equals("null") || __cur_str.length() == 0) { this.hazard_class = null; } else {
-      this.hazard_class = Integer.valueOf(__cur_str);
+    if (__cur_str.equals("null")) { this.hazard_class = null; } else {
+      this.hazard_class = __cur_str;
     }
 
     if (__it.hasNext()) {
@@ -777,8 +777,8 @@ this.readFields0(__dataIn);  }
     } else {
         __cur_str = "null";
     }
-    if (__cur_str.equals("null")) { this.subject = null; } else {
-      this.subject = __cur_str;
+    if (__cur_str.equals("null")) { this.okato = null; } else {
+      this.okato = __cur_str;
     }
 
     if (__it.hasNext()) {
@@ -786,8 +786,8 @@ this.readFields0(__dataIn);  }
     } else {
         __cur_str = "null";
     }
-    if (__cur_str.equals("null")) { this.okato = null; } else {
-      this.okato = __cur_str;
+    if (__cur_str.equals("null")) { this.subject = null; } else {
+      this.subject = __cur_str;
     }
 
     if (__it.hasNext()) {
@@ -813,8 +813,8 @@ this.readFields0(__dataIn);  }
     } else {
         __cur_str = "null";
     }
-    if (__cur_str.equals("null") || __cur_str.length() == 0) { this.hazard_class = null; } else {
-      this.hazard_class = Integer.valueOf(__cur_str);
+    if (__cur_str.equals("null")) { this.hazard_class = null; } else {
+      this.hazard_class = __cur_str;
     }
 
     if (__it.hasNext()) {
@@ -856,12 +856,12 @@ this.readFields0(__dataIn);  }
     } catch (RuntimeException e) {    throw new RuntimeException("Can't parse input data: '" + __cur_str + "'", e);    }  }
 
   public Object clone() throws CloneNotSupportedException {
-    codegen_high_pollution o = (codegen_high_pollution) super.clone();
+    high_pollution o = (high_pollution) super.clone();
     o.period = (o.period != null) ? (java.sql.Date) o.period.clone() : null;
     return o;
   }
 
-  public void clone0(codegen_high_pollution o) throws CloneNotSupportedException {
+  public void clone0(high_pollution o) throws CloneNotSupportedException {
     o.period = (o.period != null) ? (java.sql.Date) o.period.clone() : null;
   }
 
@@ -869,8 +869,8 @@ this.readFields0(__dataIn);  }
     Map<String, Object> __sqoop$field_map = new HashMap<String, Object>();
     __sqoop$field_map.put("id", this.id);
     __sqoop$field_map.put("period", this.period);
-    __sqoop$field_map.put("subject", this.subject);
     __sqoop$field_map.put("okato", this.okato);
+    __sqoop$field_map.put("subject", this.subject);
     __sqoop$field_map.put("river_basin", this.river_basin);
     __sqoop$field_map.put("indicator", this.indicator);
     __sqoop$field_map.put("hazard_class", this.hazard_class);
@@ -884,8 +884,8 @@ this.readFields0(__dataIn);  }
   public void getFieldMap0(Map<String, Object> __sqoop$field_map) {
     __sqoop$field_map.put("id", this.id);
     __sqoop$field_map.put("period", this.period);
-    __sqoop$field_map.put("subject", this.subject);
     __sqoop$field_map.put("okato", this.okato);
+    __sqoop$field_map.put("subject", this.subject);
     __sqoop$field_map.put("river_basin", this.river_basin);
     __sqoop$field_map.put("indicator", this.indicator);
     __sqoop$field_map.put("hazard_class", this.hazard_class);
