@@ -63,7 +63,7 @@
 ---
 
 ## Контакты и ссылки
-- Репозиторий проекта: [ссылка на GitHub]
+- Репозиторий проекта: [https://github.com/Danisimovers/water_pollution_analysis]
 - Документация источников данных: raw_sources.md
 
 ---
