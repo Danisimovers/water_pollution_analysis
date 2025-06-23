@@ -1,30 +1,39 @@
+import os
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import year, month, count
-import os
 
-def analyze_year_month_counts(input_path, output_path):
-    spark = SparkSession.builder.appName("YearMonthCounts").getOrCreate()
+def process_seasonality_month_year(base_path, output_base_path):
+    spark = SparkSession.builder.appName("SeasonalityByMonthYear").getOrCreate()
 
-    try:
-        df = spark.read.parquet(input_path)
-        df = df.withColumn("year", year("period")).withColumn("month", month("period"))
-        result = df.groupBy("year", "month").agg(count("*").alias("pollution_count")).orderBy("year", "month")
-        result.show(truncate=False)
-        result.coalesce(1).write.option("header", True).csv(output_path, mode="overwrite")
-        print(f"[✓] Статистика по годам и месяцам сохранена: {output_path}")
-    except Exception as e:
-        print(f"[!] Ошибка при обработке {input_path}: {e}")
+    for category in ["extreme", "high"]:
+        input_path = os.path.join(base_path, f"{category}_pollution")
+        print(f"Обработка: {input_path}")
+
+        try:
+            df = spark.read.parquet(input_path)
+
+            # Добавим колонки year и month из period
+            df = df.withColumn("year", year("period")).withColumn("month", month("period"))
+
+            # Группировка по году и месяцу
+            result = df.groupBy("year", "month").agg(count("*").alias("pollution_count")).orderBy("year", "month")
+
+            # Локальный путь
+            local_output_dir = os.path.expanduser(os.path.join(output_base_path, category, "seasonality_month_year"))
+            os.makedirs(local_output_dir, exist_ok=True)
+            local_output_path = "file://" + local_output_dir
+
+            print(f"Сохраняем результат в {local_output_path}")
+            result.coalesce(1).write.mode("overwrite").option("header", "true").csv(local_output_path)
+
+            result.show()
+
+        except Exception as e:
+            print(f"[!] Ошибка при обработке {category}: {e}")
 
     spark.stop()
 
 if __name__ == "__main__":
-    input_dirs = {
-        "extreme": "hdfs:///opt/hadoop/clean/extreme_pollution",
-        "high": "hdfs:///opt/hadoop/clean/high_pollution"
-    }
-    base_output_dir = os.path.expanduser("~/Desktop/water_pollution_analysis/data/seasonality_year_month")
-
-    for key, path in input_dirs.items():
-        out = os.path.join(base_output_dir, key)
-        print(f"\n=== Подсчет по годам и месяцам: {key} ===")
-        analyze_year_month_counts(path, out)
+    base_path = "/opt/hadoop/clean"
+    output_base_path = "~/Desktop/water_pollution_analysis/data/analysed_data_csv"
+    process_seasonality_month_year(base_path, output_base_path)
