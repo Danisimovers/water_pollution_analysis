@@ -20,7 +20,10 @@ df_extreme_joined = df_extreme.join(df_pdk, on="indicator", how="left")
 
 # 1. Средняя концентрация
 df_avg_conc = df_extreme.groupBy("indicator") \
-    .agg(avg("value_max").alias("avg_concentration")) \
+    .agg(
+        avg("value_max").alias("avg_concentration"),
+        count("*").alias("count_observations")
+    ) \
     .orderBy(col("avg_concentration").desc())
 
 print("=== Средняя концентрация каждого вещества (extreme) ===")
