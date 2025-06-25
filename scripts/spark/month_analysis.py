@@ -1,6 +1,6 @@
 import os
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import month, count
+from pyspark.sql.functions import month, sum as _sum
 
 def process_seasonality_month(base_path, output_base_path):
     spark = SparkSession.builder.appName("SeasonalityByMonth").getOrCreate()
@@ -15,8 +15,8 @@ def process_seasonality_month(base_path, output_base_path):
             # Добавим колонку month из period
             df = df.withColumn("month", month("period"))
 
-            # Группировка по месяцу с подсчётом кол-ва случаев загрязнений
-            result = df.groupBy("month").agg(count("*").alias("pollution_count")).orderBy("month")
+            # Группировка по месяцу с подсчётом СУММЫ случаев загрязнений
+            result = df.groupBy("month").agg(_sum("cnt_cases").alias("pollution_count")).orderBy("month")
 
             # Формируем локальный путь с file://
             local_output_dir = os.path.expanduser(os.path.join(output_base_path, category, "seasonality_month"))

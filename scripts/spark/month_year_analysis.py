@@ -1,6 +1,6 @@
 import os
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import year, month, count
+from pyspark.sql.functions import year, month, sum as _sum
 
 def process_seasonality_month_year(base_path, output_base_path):
     spark = SparkSession.builder.appName("SeasonalityByMonthYear").getOrCreate()
@@ -15,8 +15,10 @@ def process_seasonality_month_year(base_path, output_base_path):
             # Добавим колонки year и month из period
             df = df.withColumn("year", year("period")).withColumn("month", month("period"))
 
-            # Группировка по году и месяцу
-            result = df.groupBy("year", "month").agg(count("*").alias("pollution_count")).orderBy("year", "month")
+            # Группировка по году и месяцу + сумма cnt_cases
+            result = df.groupBy("year", "month") \
+                       .agg(_sum("cnt_cases").alias("pollution_count")) \
+                       .orderBy("year", "month")
 
             # Локальный путь
             local_output_dir = os.path.expanduser(os.path.join(output_base_path, category, "seasonality_month_year"))
