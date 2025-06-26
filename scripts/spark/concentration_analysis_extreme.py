@@ -6,16 +6,13 @@ from pyspark.sql.window import Window
 spark = SparkSession.builder.appName("NormalizeExtremePollution").getOrCreate()
 spark.sparkContext.setLogLevel("ERROR")
 
-# Пути
 extreme_path = "/opt/hadoop/clean/extreme_pollution"
 pdk_path = "/opt/hadoop/clean/pdk"
 output_base = "file:///home/Eugene/Desktop/water_pollution_analysis/data/analysed_data_csv/extreme"
 
-# Читаем данные
 df_extreme = spark.read.parquet(extreme_path)
 df_pdk_raw = spark.read.parquet(pdk_path)
 
-# Подготовка таблицы ПДК
 df_pdk = df_pdk_raw.select(
     col("ingredient").alias("indicator"),
     col("hazard_class").alias("pdk_hazard_class"),
@@ -28,7 +25,6 @@ df_pdk = df_pdk_raw.select(
 
 df_extreme = df_extreme.withColumn("period", col("period").cast(DateType()))
 
-# Джойн с жёстким совпадением hazard_class и indicator
 df_joined = df_extreme.join(
     df_pdk,
     (df_extreme.indicator == df_pdk.indicator) &
@@ -36,13 +32,11 @@ df_joined = df_extreme.join(
     how="left"
 )
 
-# Проверяем, входит ли дата загрязнения в период действия нормативного акта
 df_joined = df_joined.withColumn(
     "in_period",
     (col("period") >= col("date_start")) & (col("period") <= col("date_end"))
 )
 
-# Окно для выбора записи: сначала выбираем с in_period=True, если нет - самую новую по date_start
 window = Window.partitionBy("id").orderBy(col("in_period").desc(), col("date_start").desc())
 
 df_ranked = df_joined.withColumn("rank", row_number().over(window))

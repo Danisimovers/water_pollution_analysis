@@ -12,7 +12,6 @@ def process_seasonality_month_year(base_path, output_base_path):
         try:
             df = spark.read.parquet(input_path)
 
-            # Добавим колонки year и month из period
             df = df.withColumn("year", year("period")).withColumn("month", month("period"))
 
             # Группировка по году и месяцу + сумма cnt_cases
@@ -20,7 +19,6 @@ def process_seasonality_month_year(base_path, output_base_path):
                        .agg(_sum("cnt_cases").alias("pollution_count")) \
                        .orderBy("year", "month")
 
-            # Локальный путь
             local_output_dir = os.path.expanduser(os.path.join(output_base_path, category, "seasonality_month_year"))
             os.makedirs(local_output_dir, exist_ok=True)
             local_output_path = "file://" + local_output_dir
